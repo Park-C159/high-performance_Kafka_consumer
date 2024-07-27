@@ -119,7 +119,7 @@ The program subscribes to InfluxDB topics and writes parsed WriteMessage message
   "name": "InfluxDB",
   "group_id": "InfluxDB_group_0",
   "storage_type": "influxdb",
-  "consume_num": 1 // // InfluxDB consumer number, can be increased for improved efficiency if the number of node_agents increases
+  "consume_num": 1 // InfluxDB consumer number, can be increased for improved efficiency if the number of node_agents increases
 }
 ```
 
