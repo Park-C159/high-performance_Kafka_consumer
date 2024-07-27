@@ -1,6 +1,5 @@
 {
   "base": {
-    "version": "2.0.0",
     "mysql_pool_size": 10,
     "mysql_max_buffer_size": 100,
     "mysql_max_interval_time": 30,

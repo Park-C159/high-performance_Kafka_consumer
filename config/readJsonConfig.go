@@ -7,7 +7,6 @@ import (
 )
 
 type BaseConfig struct {
-	Version              string `json:"version"`
 	MysqlPoolSize        uint32 `json:"mysql_pool_size"`
 	MysqlMaxBufferSize   int    `json:"mysql_max_buffer_size"`
 	MysqlMaxIntervalTime int    `json:"mysql_max_interval_time"`
@@ -23,8 +22,6 @@ type TopicConfig struct {
 	GroupID     string `json:"group_id"`
 	StorageType string `json:"storage_type"`
 	ConsumeNum  int    `json:"consume_num"`
-	//PoolSize    int    `json:"pool_size"`
-
 }
 
 func LoadConfigFromFile(filename string) error {

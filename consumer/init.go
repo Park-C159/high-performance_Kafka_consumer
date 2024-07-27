@@ -14,7 +14,7 @@ import (
 )
 
 const (
-	version = "1.0.1"
+	version = "1.0.0"
 )
 
 type DataConsumer interface {
@@ -156,14 +156,13 @@ func Start() {
 	if err != nil {
 		log.E("加载配置文件失败：%v", err)
 	}
-	baseConf := config.GetBaseConfig()
 	arg := handleArgs()
 	err = config.Init(arg.kafka, arg.mysql, arg.influx)
 	if err != nil {
 		log2.Fatalf("命令行参数解析失败：%v", err)
 	}
 
-	log.I("\n" + prettyLog.GetHighlightLine(fmt.Sprintf("消费程序已启动 v%s", baseConf.Version), 30))
+	log.I("\n" + prettyLog.GetHighlightLine(fmt.Sprintf("消费程序已启动 v%s", version), 30))
 
 	var vc VenusConsumer
 	vc.Init()
