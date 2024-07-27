@@ -32,7 +32,7 @@ This will start the program using the provided database and message broker confi
 ### InsertMessage
 Message structure for insertion into MySQL database:
 
-```go
+``` go
 type InsertMessage struct {
     DbName    string         `json:"db_name"`
     TableName string         `json:"table_name"`
@@ -42,7 +42,7 @@ type InsertMessage struct {
 
 ### WriteMessage
 Message structure for writing to InfluxDB database:
-```go
+``` go
 type WriteMessage struct {
     DbName      string            `json:"db_name"`
     Measurement string            `json:"measurement"`
@@ -54,7 +54,7 @@ type WriteMessage struct {
 
 ## Common Configuration
 Example of the program's configuration file:
-```json
+``` json
 {
   "base": {
     "version": "2.0.0",
@@ -104,7 +104,7 @@ Example of the program's configuration file:
 ### Database Configuration
 #### MySQL
 The program subscribes to MySQL topics and writes parsed InsertMessage messages to the specified MySQL database tables. Example configuration:
-```javascript
+``` javascript
 {
   "name": "MySQL",
   "group_id": "mysql_group_0",
@@ -114,7 +114,7 @@ The program subscribes to MySQL topics and writes parsed InsertMessage messages 
 ```
 #### InfluxDB
 The program subscribes to InfluxDB topics and writes parsed WriteMessage messages to the specified InfluxDB database. Example configuration:
-```javascript
+``` javascript
 {
   "name": "InfluxDB",
   "group_id": "InfluxDB_group_0",
